@@ -4,7 +4,7 @@ import MealItem from "../components/MealItem";
 import { MEALS, CATEGORIES } from "../data/dummy-data";
 
 function MealsOverviewScreen({ route, navigation }) {
-  const catId = route.params.categorId;
+   const catId = route.params.categoryId;
 
   const displayMeals = MEALS.filter((mealItem) => {
     return mealItem.categoryIds.indexOf(catId) >= 0;
@@ -22,6 +22,7 @@ function MealsOverviewScreen({ route, navigation }) {
   function renderMealItem(itemData) {
     const item = itemData.item;
     const mealItemProps = {
+      id: item.id,
       title: item.title,
       imageUrl: item.imageUrl,
       duration: item.duration,
@@ -31,6 +32,7 @@ function MealsOverviewScreen({ route, navigation }) {
 
     return <MealItem {...mealItemProps} />;
   }
+
 
   return (
     <View>

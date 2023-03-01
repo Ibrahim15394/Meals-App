@@ -29,13 +29,17 @@ export default function App() {
             component={MealsOverviewScreen}
             name="MealsOverviewScreen"
         //     options={({route, navigation}) => {
-        //       const catId = route.params.categorId;
+        //       const catId = route.params.categoryId;
         //        return { title: catId };
         //  }}
           />
           <Stack.Screen 
           component={MealDetailScreen}
           name="MealDetailScreen"
+          />
+              <Stack.Screen 
+          component={MealDetailScreen}
+          name="MealDetail"
           />
         </Stack.Navigator>
       </NavigationContainer>
