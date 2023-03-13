@@ -25,6 +25,7 @@ function MealDetailScreen({ route, navigation }) {
     if (mealIsFavorite) {
       // favoriteMealsId.removeFavorite(mealId);
       dispatch(removeFavorite({ id : mealId}));
+
     } else {
       // favoriteMealsId.addFavorite(mealId);
       dispatch(addFavorite({ id : mealId}));
@@ -37,7 +38,7 @@ function MealDetailScreen({ route, navigation }) {
       headerRight: () => {
         return (
           <IconButton
-            icon={mealIsFavorite ? "star" : "star-outline"}
+            icon={mealIsFavorite ? "star" : "star-outline" }
             color="white"
             onPress={changeFavoriteStatusHandler}
           />
